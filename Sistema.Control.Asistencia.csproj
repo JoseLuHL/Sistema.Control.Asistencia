@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CC813884-5D90-4044-9571-8FB7C54D9612}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sistema.Control.Asistencia</RootNamespace>
+    <AssemblyName>Sistema.Control.Asistencia</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icono.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV">
+      <HintPath>F:\Emgu\emgucv-windows-x86 2.2.1.1150\bin\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI">
+      <HintPath>F:\Emgu\emgucv-windows-x86 2.2.1.1150\bin\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.Util">
+      <HintPath>F:\Emgu\emgucv-windows-x86 2.2.1.1150\bin\Emgu.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.5.14.0\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BD.cs" />
+    <Compile Include="Clases\Date.cs" />
+    <Compile Include="Clases\DGVPrinter.cs" />
+    <Compile Include="Clases\DiaLaboral.cs" />
+    <Compile Include="Clases\Empleado.cs" />
+    <Compile Include="Clases\EntradaLaboral.cs" />
+    <Compile Include="Clases\Persona.cs" />
+    <Compile Include="Clases\SalidaLaboral.cs" />
+    <Compile Include="Clases\EigenObjectRecognizer.cs" />
+    <Compile Include="Clases\Time.cs" />
+    <Compile Include="entity\DiaLaboral.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\Empleado.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\Empleados.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Empleados.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\Empleados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\Empleados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Empleados.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="entity\EntradaLaboral.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\Estado.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\Horario.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\horariodetalle.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\ModulosUsuario.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\Usuario.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\reporteempleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\reporteempleados.Designer.cs">
+      <DependentUpon>reporteempleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reporte\HorarioReporte.cs" />
+    <Compile Include="entity\listarDias_Result.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\listarEmpleados_Result.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\listarEntradas_Result.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\listarSalidas_Result.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\reporteAsistencia_Result.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\reporteEmpleadoAsistencia_Result.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\reporteEmpleado_Result.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\reporteGeneral_Result.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\retornarDia_Result.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\retornarEmpleado_Result.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\retornarEntradaporDia_Result.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\retornarEntrada_Result.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\retornarSalidaporDia_Result.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\retornarSalida_Result.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\SalidaLaboral.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\sp_helpdiagrams_Result.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity\sysdiagrams.cs">
+      <DependentUpon>Empleados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\formABCAsistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\formABCAsistencias.Designer.cs">
+      <DependentUpon>formABCAsistencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\formABCEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\formABCEmpleados.Designer.cs">
+      <DependentUpon>formABCEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\formABCEntradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\formABCEntradas.Designer.cs">
+      <DependentUpon>formABCEntradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\formABCSalidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\formABCSalidas.Designer.cs">
+      <DependentUpon>formABCSalidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\formAcerca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\formAcerca.Designer.cs">
+      <DependentUpon>formAcerca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\formDatosDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\formDatosDia.Designer.cs">
+      <DependentUpon>formDatosDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\formDatosEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\formDatosEmpleado.Designer.cs">
+      <DependentUpon>formDatosEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\formFaltas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\formFaltas.Designer.cs">
+      <DependentUpon>formFaltas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\formhorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\formhorario.Designer.cs">
+      <DependentUpon>formhorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\formNeuronal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\formNeuronal.Designer.cs">
+      <DependentUpon>formNeuronal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\formReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\formReportes.Designer.cs">
+      <DependentUpon>formReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\formhorariodetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\formhorariodetalle.Designer.cs">
+      <DependentUpon>formhorariodetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\formCapturaFoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\formCapturaFoto.Designer.cs">
+      <DependentUpon>formCapturaFoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\formRegAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\formRegAsistencia.Designer.cs">
+      <DependentUpon>formRegAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\RegistroHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\RegistroHorario.Designer.cs">
+      <DependentUpon>RegistroHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Formularios\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\formABCAsistencias.resx">
+      <DependentUpon>formABCAsistencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\formABCEmpleados.resx">
+      <DependentUpon>formABCEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\formABCEntradas.resx">
+      <DependentUpon>formABCEntradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\formABCSalidas.resx">
+      <DependentUpon>formABCSalidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\formAcerca.resx">
+      <DependentUpon>formAcerca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\formDatosDia.resx">
+      <DependentUpon>formDatosDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\formDatosEmpleado.resx">
+      <DependentUpon>formDatosEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\formFaltas.resx">
+      <DependentUpon>formFaltas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\formhorario.resx">
+      <DependentUpon>formhorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\formNeuronal.resx">
+      <DependentUpon>formNeuronal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\formReportes.resx">
+      <DependentUpon>formReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\formhorariodetalle.resx">
+      <DependentUpon>formhorariodetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\formCapturaFoto.resx">
+      <DependentUpon>formCapturaFoto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\formRegAsistencia.resx">
+      <DependentUpon>formRegAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\RegistroHorario.resx">
+      <DependentUpon>RegistroHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfIngresos.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <EntityDeploy Include="entity\Empleados.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Empleados.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="entity\Empleados.edmx.diagram">
+      <DependentUpon>Empleados.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Sistema.Control.Asistencia.entity.Horario.datasource" />
+    <None Include="Properties\DataSources\Sistema.Control.Asistencia.entity.HorarioReporte.datasource" />
+    <None Include="Properties\DataSources\Sistema.Control.Asistencia.reporte.HorarioReporte.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="entity\Empleados.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Empleados.Context.cs</LastGenOutput>
+      <DependentUpon>Empleados.edmx</DependentUpon>
+    </Content>
+    <Content Include="entity\Empleados.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Empleados.edmx</DependentUpon>
+      <LastGenOutput>Empleados.cs</LastGenOutput>
+    </Content>
+    <Content Include="icono.ico" />
+    <Content Include="Imágenes\fondo.png" />
+    <Content Include="Imágenes\foto.png" />
+    <Content Include="Imágenes\icono.ico" />
+    <Content Include="Imágenes\icono.png" />
+    <Content Include="Imágenes\logo.png" />
+    <Content Include="Imágenes\printer.png" />
+    <Content Include="Imágenes\registro_agregar.png" />
+    <Content Include="Imágenes\registro_borrar.png" />
+    <Content Include="Imágenes\registro_editar.png" />
+    <Content Include="Imágenes\tarjeta-rfid.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\tenor.gif" />
+    <None Include="Resources\control_asistencia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Login\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
